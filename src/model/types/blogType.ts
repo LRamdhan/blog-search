@@ -1,14 +1,18 @@
-export type CreateBlog = {
+export interface Blog {
+  id: number,
   title: string,
   content: string,
-  authorId: number
+  author: string,
+  category: string,
+  comments: {
+    text: string,
+    author: string
+  }[],
+  image_url: string,
+  likes: number,
+  publication_date: string,
+  tags: string[],
+  views: number
 };
 
-export interface BlogValue {
-  title: string,
-  content: string | null,
-  published: boolean,
-  authorId: number
-};
-
-export type Blog = Promise<BlogValue[]>;
+export type BlogPromise = Promise<Blog[]>;

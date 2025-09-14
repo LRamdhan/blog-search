@@ -11,7 +11,8 @@
     "prototype-db": "npx prisma db push",
     "studio": "npx prisma studio",
     "reset-seed-db": "npx prisma migrate reset",
-    "seed": "npx prisma db seed"
+    "seed": "npx prisma db seed",
+    "generate": "npx prisma generate --sql"
   },
   "type": "module",
   "keywords": [],
